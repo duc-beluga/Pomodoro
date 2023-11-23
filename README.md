@@ -24,6 +24,8 @@ Our website automates the Pomodoro Technique, alternating between 25-minute stud
 We used React for the frontend, integrating Lucide icons and Axios for data fetching, and react-hook-form for form handling. The backend is powered by Express with Passport.js for authentication, using express-session and GitHubStrategy.
 ## Challenges we ran into
 Implementing authentication with Passport.js was challenging, especially handling sessions and cookies.
+
+Spotify only allows premium users to access its Web Playback SDK and changing its scope was difficult.
 ## Accomplishments that we're proud of
 We successfully integrated GitHub OAuth for user authentication and added features like loop videos, timed audios, and gradient backgrounds.
 ## What we learned
