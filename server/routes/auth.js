@@ -1,5 +1,8 @@
 import express from "express";
 import passport from "passport";
+import SpotifyWebApi from "spotify-web-api-node";
+import { spotifyConfig } from "../config/spotify.js";
+import axios from "axios";
 
 const router = express.Router();
 
@@ -25,6 +28,26 @@ router.get("/logout", (req, res, next) => {
       res.json({ status: "logout", user: {} });
     });
   });
+});
+
+router.post("/spotify", async (req, res) => {
+  const { accessToken, searchInput } = req.body;
+  axios
+    .get(
+      "https://api.spotify.com/v1/search?q=" +
+        searchInput +
+        "&type=track&limit=10",
+      {
+        headers: {
+          Authorization: "Bearer " + accessToken,
+        },
+      }
+    )
+    .then((response) => res.status(200).json(response.data.tracks))
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json(err);
+    });
 });
 
 router.get(

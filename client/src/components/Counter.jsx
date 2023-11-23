@@ -52,6 +52,7 @@ const Counter = ({ studyTime, breakTime }) => {
   const handleReset = () => {
     setStart(false);
     setTimer(studyTime);
+    setCurSession("study");
   };
 
   const handlePause = () => {
@@ -59,11 +60,11 @@ const Counter = ({ studyTime, breakTime }) => {
   };
 
   const formatCounter = () => {
-    return curSession === "study" ? "text-green-300" : "text-red-300";
+    return curSession === "study" ? "text-green-500" : "text-red-500";
   };
 
   return (
-    <>
+    <div>
       <div className="relative flex py-5 items-center">
         <div className="flex-grow border-t border-black-400"></div>
         <span className={`flex-shrink mx-4 ${formatCounter()} text-4xl`}>
@@ -72,7 +73,7 @@ const Counter = ({ studyTime, breakTime }) => {
         <div className="flex-grow border-t border-black-400"></div>
       </div>
       <div
-        className={`bg-transparent text-9xl text-white p-3 border-2 rounded-lg pb-4 font-light`}
+        className={`bg-transparent text-9xl text-white p-3 border-2 rounded-lg pb-4 font-light h-40 w-80`}
       >
         {formatTime(timer)}
       </div>
@@ -103,7 +104,7 @@ const Counter = ({ studyTime, breakTime }) => {
           Reset
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

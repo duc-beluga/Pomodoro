@@ -14,9 +14,13 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-end">
-        {!isLoggedIn && (
+        {!isLoggedIn ? (
           <Link className="btn" to="/signup">
             Sign Up
+          </Link>
+        ) : (
+          <Link className="btn bg-transparent text-white" onClick={logout}>
+            Sign out
           </Link>
         )}
       </div>

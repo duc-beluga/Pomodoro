@@ -8,12 +8,12 @@ const SignUp = () => {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
   return (
-    <>
+    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       <Navbar />
       <div className="flex flex-col justify-center items-center h-screen gap-3">
         <form
           onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
-          className="flex flex-col gap-3 border-2 p-3 rounded-lg shadow-lg w-96"
+          className="flex flex-col gap-3 border-2 p-3 rounded-lg shadow-lg w-96 bg-white py-10"
         >
           <input
             {...register("username")}
@@ -24,11 +24,13 @@ const SignUp = () => {
             {...register("password")}
             placeholder="Password"
             className="p-3 border-2 rounded-md"
+            type="password"
           />
           <input
             {...register("confirmPassword")}
             placeholder="Confirm Password"
             className="p-3 border-2 rounded-md"
+            type="password"
           />
           <p>{data}</p>
           <button
@@ -39,7 +41,7 @@ const SignUp = () => {
           </button>
           <span className="my-4">
             Already have an account?{" "}
-            <Link to="/login" className="underline">
+            <Link to="/" className="underline">
               Log In
             </Link>
           </span>
@@ -50,7 +52,7 @@ const SignUp = () => {
           </Link>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
