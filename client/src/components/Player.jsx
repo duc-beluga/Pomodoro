@@ -11,20 +11,6 @@ const Player = ({ play, curSong, setPlay }) => {
       }}
       play={play}
       uris={curSong}
-      //   styles={{
-      //     bgColor: "#D0D0D0",
-      //     //   sliderColor: "#FFFFFF",
-      //     //   loaderColor: "#FFFFFF",
-      //     //   sliderHandleColor: "#FFFFFF",
-      //     //   activeColor: "#FFFFFF",
-      //     //   altColor: "#FFFFFF",
-      //     //   color: "#FFFFFF",
-      //     //   sliderTrackColor: "#FFFFFF",
-      //     //   trackArtistColor: "#FFFFFF",
-      //     trackNameColor: "#E0E0E0",
-      //     //   sliderHandleBorderRadius: "0.375rem",
-      //     //   sliderTrackBorderRadius: "0.375rem",
-      //   }}
     />
   );
 };
