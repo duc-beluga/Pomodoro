@@ -36,7 +36,7 @@ const Home = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const handleClickTest = (e) => {
+  const handleSearch = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:3000/auth/spotify", {
@@ -61,7 +61,7 @@ const Home = () => {
             <Player play={play} curSong={curSong} setPlay={setPlay} />
           </div>
           <Searcher
-            handleClickTest={handleClickTest}
+            handleSearch={handleSearch}
             setSearchInput={setSearchInput}
             songs={songs}
             setCurSong={setCurSong}

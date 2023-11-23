@@ -1,7 +1,7 @@
 import React from "react";
 
 const Searcher = ({
-  handleClickTest,
+  handleSearch,
   setSearchInput,
   songs,
   setCurSong,
@@ -9,7 +9,7 @@ const Searcher = ({
 }) => {
   return (
     <div className="flex flex-col gap-y-5 m-5">
-      <form onSubmit={handleClickTest}>
+      <form onSubmit={handleSearch}>
         <input
           type="text"
           onChange={(e) => setSearchInput(e.target.value)}
