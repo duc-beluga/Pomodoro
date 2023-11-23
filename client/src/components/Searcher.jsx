@@ -1,15 +1,20 @@
 import React from "react";
 
 const Searcher = ({
+  searchInput,
   handleSearch,
   setSearchInput,
   songs,
   setCurSong,
   setPlay,
 }) => {
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    handleSearch(searchInput);
+  };
   return (
     <div className="flex flex-col gap-y-5 m-5">
-      <form onSubmit={handleSearch}>
+      <form onSubmit={handleSearchSubmit}>
         <input
           type="text"
           onChange={(e) => setSearchInput(e.target.value)}
