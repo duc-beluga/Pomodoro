@@ -64,7 +64,7 @@ const Counter = ({ studyTime, breakTime }) => {
   };
 
   return (
-    <div>
+    <div className="w-[400px]">
       <div className="relative flex py-5 items-center">
         <div className="flex-grow border-t border-black-400"></div>
         <span className={`flex-shrink mx-4 ${formatCounter()} text-4xl`}>
@@ -72,10 +72,12 @@ const Counter = ({ studyTime, breakTime }) => {
         </span>
         <div className="flex-grow border-t border-black-400"></div>
       </div>
-      <div
-        className={`bg-transparent text-9xl text-white p-3 border-2 rounded-lg pb-4 font-light h-40 w-80`}
-      >
-        {formatTime(timer)}
+      <div className="flex justify-center items-center">
+        <div
+          className={`bg-transparent text-9xl text-white p-3 border-2 rounded-lg pb-4 font-light h-40 w-80`}
+        >
+          {formatTime(timer)}
+        </div>
       </div>
       <div className="flex text-3xl my-4 justify-center items-center gap-x-6">
         <div>
