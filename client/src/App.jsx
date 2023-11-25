@@ -1,9 +1,9 @@
 import { useRoutes } from "react-router-dom";
-import Home from "./pages/Home";
-import SignUp from "./pages/SignUp";
-import Login from "./pages/Login";
+import Home from "./pages/Home.jsx";
+import SignUp from "./pages/SignUp.jsx";
+import Login from "./pages/Login.jsx";
 import axios from "axios";
-import { useAuth } from "./context/AuthContext";
+import { useAuth } from "./context/AuthContext.jsx";
 
 axios.defaults.withCredentials = true;
 
