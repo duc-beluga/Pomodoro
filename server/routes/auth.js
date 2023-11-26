@@ -11,6 +11,7 @@ router.get("/login/success", (req, res) => {
   if (req.user) {
     res.status(200).json({ success: true, user: req.user });
   }
+  res.status(401).json({ success: true, message: "not logged in" });
 });
 
 router.get("/login/failed", (req, res) => {
