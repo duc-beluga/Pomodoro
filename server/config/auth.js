@@ -8,6 +8,7 @@ const options = {
 
 const verify = async (accessToken, refreshToken, profile, callback) => {
   const user = { id: 123, name: "John Doe" };
+  console.log(user);
   callback(null, user);
 };
 
