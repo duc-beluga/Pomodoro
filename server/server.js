@@ -5,6 +5,7 @@ import passport from "passport";
 import session from "express-session";
 
 import { sessionConfig } from "./config/session.js";
+import { corsConfig } from "./config/cors.js";
 import { GitHub } from "./config/auth.js";
 import authRoute from "./routes/auth.js";
 
@@ -13,7 +14,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(cors(corsConfig));
 app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
