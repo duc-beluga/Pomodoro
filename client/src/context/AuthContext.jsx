@@ -10,9 +10,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch(`${VITE_BACKEND_URL}/auth/login/success`, {
-          credentials: "include",
-        });
+        const response = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/auth/login/success`,
+          {
+            credentials: "include",
+          }
+        );
         const json = await response.json();
         console.log("AuthContext", json.user);
         setUser(json.user);
@@ -30,9 +33,12 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const response = await fetch(`${VITE_BACKEND_URL}/auth/logout`, {
-        credentials: "include",
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/auth/logout`,
+        {
+          credentials: "include",
+        }
+      );
 
       await response.json();
       setUser(null);

@@ -45,7 +45,10 @@ const SignUp = () => {
               Log In
             </Link>
           </span>
-          <Link to={`${VITE_BACKEND_URL}/auth/github`} className="border-t-2">
+          <Link
+            to={`${import.meta.env.VITE_BACKEND_URL}/auth/github`}
+            className="border-t-2"
+          >
             <span className="flex gap-2 justify-center items-center bg-black text-white p-3 rounded-md shadow-lg my-3 ">
               <Github /> Login with GitHub
             </span>
