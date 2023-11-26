@@ -10,14 +10,11 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:3000/auth/login/success`,
-          {
-            credentials: "include",
-          }
-        );
+        const response = await fetch(`${VITE_BACKEND_URL}/auth/login/success`, {
+          credentials: "include",
+        });
         const json = await response.json();
-        console.log("asdsad", json.user);
+        console.log("AuthContext", json.user);
         setUser(json.user);
       } catch (error) {
         toast.error("Error getting user data! Please try again.");
@@ -33,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/auth/logout`, {
+      const response = await fetch(`${VITE_BACKEND_URL}/auth/logout`, {
         credentials: "include",
       });
 

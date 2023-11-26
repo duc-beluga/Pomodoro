@@ -13,17 +13,19 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(GitHub);
 
 passport.serializeUser((user, done) => {
+  console.log("serializeUser", user);
   done(null, user);
 });
 
 passport.deserializeUser((user, done) => {
+  console.log("deserializeUser", user);
   done(null, user);
 });
 
