@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     const getUser = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.BACKEND_URL}/auth/login/success`,
+          `${import.meta.env.VITE_BACKEND_URL}/auth/login/success`,
           {
             credentials: "include",
           }
@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.BACKEND_URL}/auth/logout`,
+        `${import.meta.env.VITE_BACKEND_URL}/auth/logout`,
         {
           credentials: "include",
         }

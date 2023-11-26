@@ -28,7 +28,7 @@ const useSpotify = () => {
 
   const handleSearch = (searchInput) => {
     axios
-      .post(`${import.meta.env.BACKEND_URL}/auth/spotify`, {
+      .post(`${import.meta.env.VITE_BACKEND_URL}/auth/spotify`, {
         accessToken: accessToken,
         searchInput: searchInput,
       })
