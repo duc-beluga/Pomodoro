@@ -40,7 +40,7 @@ const SignUp = () => {
             Sign Up
           </button>
           <span className="my-4">
-            Already have an account huh bitch???{" "}
+            Already have an account.{" "}
             <Link to="/" className="underline">
               Log In
             </Link>

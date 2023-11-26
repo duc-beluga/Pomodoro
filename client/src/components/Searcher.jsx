@@ -18,7 +18,7 @@ const Searcher = ({
         <input
           type="text"
           onChange={(e) => setSearchInput(e.target.value)}
-          className="p-2 rounded-md shadow-lg bg-slate-800 text-white opacity-80"
+          className="p-2 rounded-md shadow-lg bg-transparent text-white opacity-80 placeholder-white focus:outline-none"
           placeholder="Search song..."
         />
       </form>
@@ -35,7 +35,8 @@ const Searcher = ({
               }}
             />
             <div className="flex justify-center items-center opacity-50 group-hover:opacity-100">
-              {`${song.name} - ${song.artists[0].name}`}
+              <span className="font-semibold pr-1">{song.name}</span>
+              {" - " + song.artists[0].name}
             </div>
           </div>
         ))}

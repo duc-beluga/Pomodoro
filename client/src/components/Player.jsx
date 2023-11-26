@@ -11,6 +11,13 @@ const Player = ({ play, curSong, setPlay }) => {
       }}
       play={play}
       uris={curSong}
+      styles={{
+        bgColor: "#00000000",
+        color: "#FFFFFF",
+        loaderColor: "#FFFFFF",
+        sliderColor: "#FFFFFF",
+        savedColor: "#FFFFFF",
+      }}
     />
   );
 };

@@ -60,7 +60,7 @@ const Counter = ({ studyTime, breakTime }) => {
   };
 
   const formatCounter = () => {
-    return curSession === "study" ? "text-green-500" : "text-red-500";
+    return curSession === "study" ? "text-white" : "text-black";
   };
 
   return (

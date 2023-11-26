@@ -1,8 +1,9 @@
 import express from "express";
 import passport from "passport";
 import SpotifyWebApi from "spotify-web-api-node";
-import { spotifyConfig } from "../config/spotify.js";
+import { spotifyConfig, spotifyConfigTwo } from "../config/spotify.js";
 import axios from "axios";
+import querystring from "querystring";
 
 const router = express.Router();
 
@@ -48,6 +49,13 @@ router.post("/spotify", async (req, res) => {
       console.log(err);
       res.status(400).json(err);
     });
+});
+
+router.get("/spotify", async (req, res) => {
+  res.redirect(
+    "https://accounts.spotify.com/authorize?" +
+      querystring.stringify(spotifyConfigTwo)
+  );
 });
 
 router.get(
