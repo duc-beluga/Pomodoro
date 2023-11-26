@@ -39,7 +39,10 @@ const Login = () => {
               Sign Up
             </Link>
           </span>
-          <Link to={"http://localhost:3000/auth/github"} className="border-t-2">
+          <Link
+            to={`${import.meta.env.BACKEND_URL}/auth/github`}
+            className="border-t-2"
+          >
             <span className="flex gap-2 justify-center items-center bg-black text-white p-3 rounded-md shadow-lg my-3 ">
               <Github /> Login with GitHub
             </span>
