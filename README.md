@@ -38,9 +38,8 @@ We plan to expand the app's capabilities with D3.js to visualize user activity, 
 
 ![image](https://github.com/duc-beluga/Pomodoro/assets/98554622/eef38f55-b0f2-446b-bc48-1e169264548c)
 
-![image](https://github.com/duc-beluga/Pomodoro/assets/98554622/59221520-eab7-4ebb-ba29-0aab29dbc7bb)
+![Home_v2](https://github.com/duc-beluga/Pomodoro/assets/98554622/bd818a22-6cfa-4c88-84b6-5cccafa583fb)
 
-![image](https://github.com/duc-beluga/Pomodoro/assets/98554622/04b999f6-8479-4e7d-bfc3-b192aa6863e1)
 
 
 
